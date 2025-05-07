@@ -22,7 +22,8 @@ before_script:
   - func_rse_docker_cleanup
   - docker login -u $NDIP_DOCKER_USER -p $NDIP_DOCKER_PASSWORD $NDIP_DOCKER_REPOSITORY
   - export VERSION=$(cat pyproject.toml | grep "version =" | head -n 1 | awk '{ print $3 }' | tr -d '"')
-  after_script:
+
+after_script:
   - curl https://code.ornl.gov/rse-deployment/rse-sharables/raw/master/rse-bash-modules.sh -O
   - source rse-bash-modules.sh
   - func_rse_docker_cleanup
