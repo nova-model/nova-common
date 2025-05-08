@@ -28,20 +28,6 @@ pip install poetry
 poetry install
 ```
 
-## Running
-### From source
-```bash
-poetry run app
-```
-
-### Using Docker
-```bash
-# build from source
-docker build -f dockerfiles/Dockerfile -t nova.common .
-# run a container
-docker run nova.common
-```
-
 ## Formatting
 ```commandline
 poetry run ruff format
