@@ -1,8 +1,8 @@
 [tool.poetry]
 name = "nova-common"
-version = "0.1.0"
+version = "0.2.0"
 description = "NOVA Common Project"
-authors = []
+authors = ["Sergey Yakubov yakubovs@ornl.gov"]
 readme = "README.md"
 license = "MIT"
 keywords = ["NDIP", "NOVA", "python"]
@@ -87,6 +87,3 @@ sphinx = "*"
 sphinx-rtd-theme = "*"
 sphinxcontrib-napoleon ="*"
 tomli = "*"
-
-[tool.poetry.scripts]
-app = "nova.common:main"
