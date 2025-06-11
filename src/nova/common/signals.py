@@ -10,6 +10,7 @@ class Signal(str, Enum):
     OUTPUTS = "outputs"
     TOOL_COMMAND = "tool_command"
     ERROR_MESSAGE = "error_message"
+    EXIT_SIGNAL = "kill_jobs_on_exit"
 
 
 def get_signal_id(id: str, signal: Signal) -> str:
