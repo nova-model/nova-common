@@ -10,6 +10,7 @@ class Signal(str, Enum):
     OUTPUTS = "outputs"
     TOOL_COMMAND = "tool_command"
     ERROR_MESSAGE = "error_message"
+    GET_ALL_TOOLS = "get_all_running_tools"
     EXIT_SIGNAL = "kill_jobs_on_exit"
 
 
