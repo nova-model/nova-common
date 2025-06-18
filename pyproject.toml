@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "nova-common"
-version = "0.2.2"
+version = "0.2.3"
 description = "NOVA Common Project"
 authors = ["Sergey Yakubov yakubovs@ornl.gov"]
 readme = "README.md"
