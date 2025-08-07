@@ -6,7 +6,7 @@ from typing import Any, Dict, List
 import blinker
 from typing_extensions import Callable
 
-from nova.common.signals import Signal, get_signal_id
+from nova.common.signals import get_signal_id
 
 
 class Event:
@@ -91,13 +91,13 @@ class Event:
 _events_map: Dict[str, Event] = {}
 
 
-def get_event(signal_id: Signal, unique_id: str = "") -> Event:
+def get_event(signal_id: str, unique_id: str = "") -> Event:
     """
     Get or create an Event instance based on the given id and signal_id.
 
     Args:
-        id (str): The identifier string for the event.
-        signal_id (Signal): The Signal object used to generate a unique signal name.
+        id (str): The identifier string that can be appended to the signal name.
+        signal_id (str): The signal name.
 
     Returns
     -------

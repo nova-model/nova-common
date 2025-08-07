@@ -12,9 +12,10 @@ class Signal(str, Enum):
     ERROR_MESSAGE = "error_message"
     GET_ALL_TOOLS = "get_all_running_tools"
     EXIT_SIGNAL = "kill_jobs_on_exit"
+    CUSTOM_SIGNAL = "custom"
 
 
-def get_signal_id(id: str, signal: Signal) -> str:
+def get_signal_id(id: str, signal: str) -> str:
     return f"{id}_{signal}"
 
 
