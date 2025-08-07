@@ -91,7 +91,7 @@ class Event:
 _events_map: Dict[str, Event] = {}
 
 
-def get_event(id: str, signal_id: Signal) -> Event:
+def get_event(signal_id: Signal, unique_id: str = "") -> Event:
     """
     Get or create an Event instance based on the given id and signal_id.
 
@@ -103,7 +103,7 @@ def get_event(id: str, signal_id: Signal) -> Event:
     -------
         Event: The Event instance corresponding to the combined signal name.
     """
-    name = get_signal_id(id, signal_id)
+    name = get_signal_id(unique_id, signal_id)
     if name not in _events_map:
         _events_map[name] = Event(name)
 
