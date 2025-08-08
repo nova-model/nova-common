@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "nova-common"
-version = "0.2.3"
+version = "0.3.0"
 description = "NOVA Common Project"
 authors = ["Sergey Yakubov yakubovs@ornl.gov"]
 readme = "README.md"
@@ -19,6 +19,7 @@ include = [
 [tool.poetry.dependencies]
 python = "^3.10"
 pydantic = "^2.11.4"
+blinker = "^1.9.0"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
@@ -82,6 +83,7 @@ mypy = ">=1.10.0"
 pre-commit = ">=2.20.0"
 coverage = ">=6.4.3"
 pytest = "*"
+pytest-asyncio = "*"
 ruff = ">=0.6.2"
 copier=">=9.3"
 sphinx = "*"
