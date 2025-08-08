@@ -1,5 +1,6 @@
 """Test package."""
 
+import uuid
 from typing import Any
 
 import pytest
@@ -19,7 +20,7 @@ def update_state_sync(_sender: Any, value: int) -> int:
 
 @pytest.fixture
 def test_event() -> Event:
-    id = "Test"
+    id = str(uuid.uuid4())
     event = events.get_event(Signal.TOOL_COMMAND, id)
     return event
 
