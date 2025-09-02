@@ -1,6 +1,6 @@
 ARG SOURCE_IMAGE=source
 
-FROM --platform=amd64 regproxy.ornl.gov/hub_proxy/python:3.10-slim AS source
+FROM --platform=amd64 python:3.10-slim AS source
 
 # make sure image can run as non-root user
 ENV POETRY_CACHE_DIR=/poetry/.cache
@@ -25,7 +25,7 @@ FROM $SOURCE_IMAGE as source_image
 
 
 
-FROM --platform=amd64 regproxy.ornl.gov/hub_proxy/ubuntu:22.04 AS run
+FROM --platform=amd64 ubuntu:22.04 AS run
 
 RUN DEBIAN_FRONTEND="noninteractive" apt-get update && apt-get -y install tzdata
 RUN apt-get install -y python3.10 curl
