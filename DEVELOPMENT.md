@@ -6,7 +6,7 @@ the NOVA Common project.
 ## Starting from the template
 
 - Add other Python dependencies you project need with `poetry add xxx` or `poetry add --dev xxx`
-- Modify Dockerfile as needed. Please make sure it can still run as non-root (we use it in GitLab CI/CD and in general this
+- Modify Dockerfile as needed. Please make sure it can still run as non-root (we use it in GitHub Actions and in general this
 is a good practice).
 - install pre-commit (if not already installed) - `pip install pre-commit`
 - activate `pre-commit` for your project: `cd <project folder> && pre-commit install`
@@ -60,12 +60,11 @@ poetry run copier update
 See [here](https://copier.readthedocs.io/en/stable/updating/#updating-a-project) for more information.
 
 
-## CI/CD in GitLab
+## CI/CD in GitHub
 
-Take a look at the [`.gitlab-ci.yml`](.gitlab-ci.yml) file. It configures pipelines to run in GitLab.
-Some jobs will run automatically on each commit, jobs to
-build packages and Docker images need to be triggered manually.
-
+Take a look at the [`.github/workflows`](.github/workflows) folder.
+Actions to lint and test your code will run automatically on each commit.
+The action for building and releasing this package needs to be triggered manually.
 
 ### Versioning
 
