@@ -1162,7 +1162,10 @@ packages:
 - pypi: ./
   name: nova-common
   version: 0.3.0
-  sha256: 9e0ac142ed2bfce294d41c2afca7446dd17c31fe7ac1380e590ae0678c8f965f
+  sha256: 520108972ea6cc594026536b345d27cc35b158781c959df12d1d680bede3ff46
+  requires_dist:
+  - blinker>=1.9.0
+  - pydantic>=2.11.4
   requires_python: '>=3.10,<3.14'
   editable: true
 - conda: https://conda.anaconda.org/conda-forge/linux-64/openssl-3.6.0-h26f9b46_0.conda

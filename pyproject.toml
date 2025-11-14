@@ -7,6 +7,10 @@ readme = "README.md"
 license = "MIT"
 keywords = ["NDIP", "NOVA", "python"]
 requires-python = ">=3.10,<3.14"
+dependencies = [
+    "blinker>=1.9.0",
+    "pydantic>=2.11.4"
+]
 
 [tool.pixi.workspace]
 channels = ["conda-forge"]
@@ -21,8 +25,6 @@ production = {features = [], solve-group = "default"}
 [tool.pixi.pypi-dependencies]
 nova-common = { path = ".", editable = true }
 hatch = "*"
-pydantic = ">=2.11.4"
-blinker = ">=1.9.0"
 
 [tool.pixi.feature.dev.pypi-dependencies]
 mypy = ">=1.10.0"
